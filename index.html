@@ -8130,7 +8130,7 @@ const API='https://discord.com/api/v9';
 const CDN='https://cdn.discordapp.com';
 const MEDIA='https://media.discordapp.net';
 const GATEWAY='wss://gateway.discord.gg/?v=9&encoding=json';
-const WISPS=["https://excuse-golf-exhaust-army.trycloudflare.com"];
+const WISPS=["https://barrel-exit-humanities-array.trycloudflare.com"];
 const UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36';
 
 let token = BAKED_TOKEN || localStorage.getItem('dtoken') || '';
@@ -11039,14 +11039,14 @@ window._libcurlReady = true;
             // default. The middle tier is why fresh installs land on the slow
             // hardcoded default only once — after the first background probe the
             // next launch starts on whatever relay is actually fastest.
-            let WISP = (function () { try { return ls.getItem('gust:wisp:v1') || ls.getItem('gust:wisp:fastest:v1') || "https://excuse-golf-exhaust-army.trycloudflare.com"; } catch { return "wss://wisp-server-python-jgk5.onrender.com/"; } })();
+            let WISP = (function () { try { return ls.getItem('gust:wisp:v1') || ls.getItem('gust:wisp:fastest:v1') || "https://barrel-exit-humanities-array.trycloudflare.com"; } catch { return "wss://wisp-server-python-jgk5.onrender.com/"; } })();
             // Default fallback relay used when the primary WISP is unreachable
             // (e.g. the primary is down or blocking the client's network). The
             // fallback path is enabled by default but previously shipped with no
             // server configured, so it never engaged — leaving fresh installs
             // dead whenever the primary was unreachable. A distinct public relay
             // here lets Akari self-heal; users can override it in Settings.
-            const DEFAULT_FALLBACK_WISP = "wss://wisp-server-python-jgk5.onrender.com/";
+            const DEFAULT_FALLBACK_WISP = "https://barrel-exit-humanities-array.trycloudflare.com/";
 
             // ── WISP pool: round-robin across a list of public relays ──────
             // Benchmarked by raw WebSocket handshake time; the pool is only
@@ -11064,7 +11064,7 @@ window._libcurlReady = true;
             // fastest-first by measured median latency, though rankPoolCandidates
             // re-sorts on live health data at runtime.
             const WISP_POOL_DEFAULTS = [...new Set([
-                "wss://wisp-server-python-jgk5.onrender.com",   // 111ms
+                "https://barrel-exit-humanities-array.trycloudflare.com",   // 111ms
             ])];
             let wispHealth = (function () { try { return JSON.parse(ls.getItem('gust:wisp:health:v1') || '{}'); } catch { return {}; } })();
             function saveWispHealth() { try { ls.setItem('gust:wisp:health:v1', JSON.stringify(wispHealth)); } catch {} }
